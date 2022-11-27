@@ -12,6 +12,6 @@ class Bill extends Model
 
     public function cliente()
     {
-        return $this->belongsTo(Cliente::class, 'id');
+        return $this->belongsTo(Cliente::class, 'client_id');
     }
 }

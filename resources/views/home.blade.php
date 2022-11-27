@@ -71,11 +71,16 @@
                             <td>{{ $cliente->pais}}</td>
                             <td>{{ $cliente->fecha_de_alta}}</td>
                             <td>
-                                <form  method="GET" action="{{route('clientes.edit', $cliente)}}">
+                                 <form  method="GET" action="{{route('clientes.edit', $cliente)}}">
                                     <button class="btn  btn-sm">
                                             <i class="fa-solid fa-pen-to-square"></i>
                                     </button>
-                                </form>
+                                </form> 
+                                {{-- <form  method="GET" action="{{route('clientes.edit', $cliente->id)}}">
+                                    <button class="btn  btn-sm">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                    </button>
+                                </form> --}}
                             </td>
                             <td>
                               <form  method="GET" action="{{route('bills.create', $cliente)}}">

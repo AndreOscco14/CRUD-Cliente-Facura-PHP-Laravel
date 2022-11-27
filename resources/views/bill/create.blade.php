@@ -1,7 +1,7 @@
 <!-- Llama a plantilla de Layout para que se pueda leer en welcome.blade.php -->
 @extends('layout/plantilla')
 
-@section('titulopagina','Listado Clientes')
+@section('titulopagina','Crear Facturas')
 
 
 <!-- CONTENIDO -->

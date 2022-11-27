@@ -23,17 +23,10 @@
 <div class="card mt-5">
     <div class="card-header">
           <h3 class="text-center mt-5"> 
-               <i class="fa-solid fa-list me-3"></i> Listado de Facturas 
+               <i class="fa-solid fa-list me-3 mb-5"></i> Listado de Facturas 
           </h3>
   
-         
-  
-          <p>
-              <a href="#"  class="btn btn-dark m-3"  style="float: right;" >
-               <span class="fa-solid fa-user-plus"></span> Agregar nueva factura 
-               <!-- <i class="fa-solid fa-user-plus"></i>  -->
-              </a>
-          </p>
+    
     </div>
     <div class="card-body">
           <p class="card-text">
@@ -53,7 +46,6 @@
                           <th>Importe total</th>
                           <th>Fecha de Alta</th>
                           <th>Editar</th>
-                          <th>Crear factura</th>
                           <th>Eliminar</th>
                       </thead>
                       <tbody class="text-center">
@@ -71,19 +63,13 @@
                               <td>{{ $bill->total}}</td>
                               <td>{{ $bill->created_at}}</td>
                               <td>
-                                  <form  method="GET" action="#">
+                                  <form  method="GET" action="{{route('bills.edit', $bill)}}">
                                       <button class="btn  btn-sm">
                                               <i class="fa-solid fa-pen-to-square"></i>
                                       </button>
                                   </form>
                               </td>
-                              <td>
-                                <form  method="GET" action="#">
-                                    <button class="btn  btn-sm">
-                                      <i class="fa-solid fa-file-circle-plus"></i>
-                                     </button>
-                                </form>
-                            </td>
+                            
                               <td>
                                   <form action="">
                                       <button class="btn  btn-sm">

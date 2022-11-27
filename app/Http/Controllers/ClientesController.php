@@ -27,7 +27,9 @@ class ClientesController extends Controller
     // ================================================
     public function read()
     {
+        
         //Agregamos datos
+        
         $datos = Cliente::all();
         return view('home', compact('datos'));
     }
@@ -66,21 +68,32 @@ class ClientesController extends Controller
     }
 
 
-    public function edit(Cliente $cliente)
+       public function edit(Cliente $cliente)
+      {
+          //Metodo que sirve para traer datos que se editan y los colocan en un formulario
+           // $clientes = Cliente:find($id);
+           // dd()
+
+
+          return view("actualizar" , compact('cliente'));
+      }
+
+
+    public function update(Request $request, Cliente $cliente)
     {
-        //Metodo que sirve para traer datos que se editan y los colocan en un formulario
-        // $clientes = Cliente:find($id);
-        // dd()
-        return view("actualizar" , compact('clientes'));
+       $cliente->nombre = $request->nombre;
+       $cliente->apellidos = $request->apellidos;
+       $cliente->nif = $request->nif;
+       $cliente->domicilio = $request->domicilio;
+       $cliente->poblacion = $request->poblacion;
+       $cliente->codigo_postal = $request->codigo_postal;
+       $cliente->provincia = $request->provincia;
+       $cliente->pais = $request->pais;
+       $cliente->fecha_de_alta = $request->fecha_de_alta;
+       $cliente->save();
+
+       return redirect()->route("clientes.read")->with("Success", "¡Cliente Actualizado!");
     }
-
-
-    public function update(Request $request, Cliente $clientes)
-    {
-        //Metodo actuaiza datos en la BBDD
-        // $cliente = Cliente::find($id);
-    }
-
 
     public function destroy(Cliente $clientes)
     {

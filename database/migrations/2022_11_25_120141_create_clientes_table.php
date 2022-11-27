@@ -14,7 +14,6 @@ return new class extends Migration
     public function up()
     {
         // ID/Código de Cliente, Nombre, NIF, Domicilio, Población, Código Postal, Provincia, País, Fecha de Alta.
-
         Schema::create('clientes', function (Blueprint $table) {
             $table->id();
             $table->string('nombre');
