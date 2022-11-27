@@ -1,6 +1,7 @@
 @extends ('layout/plantilla')
 
-@section ("titulo pagina","Eliminar Cliente")
+@section ("titulo pagina","Eliminar Factura")
+
 
 
 @section('contenido')
@@ -9,51 +10,56 @@
         <div class="card mt-5">
         <div class="card-header">
             <h3 class="text-center m-5">
-            <i class="fa-solid fa-trash-can me-3"></i> Eliminar Datos de un Cliente
+            <i class="fa-solid fa-trash-can me-3"></i> Eliminar Factura
             </h3>
         </div>
         <div class="card-body">
             
             <p class="card-text">
                 <div class="alert alert-danger" role="alert">
-                   ¿Desea eliminar al Cliente?
+                   ¿Desea eliminar Factura?
+
                    <table class="table table-sm table-hover">
                     <thead>
-                        <th>Nombre Cliente</th>
-                        <th>Apellidos</th>
-                        <th>NIF / DNI </th>
-                        <th>Domicilio</th>
-                        <th>Población</th>
-                        <th>Código Postal</th>
-                        <th>Provincia</th>
-                        <th>País</th>
-                        <th>Fecha de Alta</th>
-                        <!-- <th>Editar</th>
-                        <th>Eliminar</th> -->
+                          <th>ID FACTURA</th>
+                          <th>Nombre Cliente</th>
+                          <th>Apellidos</th>
+                          <th>NIF / DNI </th>
+                          <th>Cliente Id</th>
+                          <th>concepto</th>
+                          <th>Unidad</th>
+                          <th>Precio</th>
+                          <th>Importe total</th>
+                          <th>Fecha de Alta</th>
                     </thead>
                     <tbody>
                         <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>{{ $bill->id}}</td>
+                            <td>{{ $bill->cliente->nombre}}</td>
+                            <td>{{ $bill->cliente->apellidos}}</td>
+                            <td>{{ $bill->cliente->nif}}</td>
+                            <td>{{ $bill->cliente->id}}</td>
+
+                            <td>{{ $bill->concept}}</td>
+                            <td>{{ $bill->units}}</td>
+                            <td>{{ $bill->unit_price}}</td>
+                            <td>{{ $bill->total}}</td>
+                            <td>{{ $bill->created_at}}</td>
                         </tr>
                     </tbody>
                    </table>
                    <hr>
-                   <form action="">
+                    <form action="{{route('bills.destroy', $bill)}}" method="POST">
+                        @csrf
+                        @method('DELETE')
+
                         <a href="{{route('clientes.index')}}" class="btn btn-dark">
-                        <i class="fa-solid fa-rotate-left"></i> Regresar
+                            <i class="fa-solid fa-house"></i> Home
                         </a>
                         <button class="btn btn-danger" style="float:right">
                         <i class="fa-solid fa-trash-can "></i> Eliminar Cliente
                         </button>
-                   </form>
+                   </form> 
                 </div>
             </p>
             

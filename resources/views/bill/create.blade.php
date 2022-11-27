@@ -53,8 +53,8 @@
                 <label for="">Precio unitario</label>
                 <input class="form-control" type="number" name="unit_price">
 
-                <a href="{{route("clientes.index")}}" class="btn btn-dark mt-3"><i class="fa-solid fa-house"></i> home</a>
-                <button class="btn btn-dark mt-3" style="float:right"> <i class="fa-solid fa-file-circle-plus"></i>Agregar nueva Fctura</button>
+                <a href="{{route("clientes.index")}}" class="btn btn-dark mt-3"><i class="fa-solid fa-house"></i> Home</a>
+                <button class="btn btn-dark mt-3" style="float:right"> <i class="fa-solid fa-file-circle-plus"></i>  Agregar nueva Fctura</button>
             
             </form>
         </p>

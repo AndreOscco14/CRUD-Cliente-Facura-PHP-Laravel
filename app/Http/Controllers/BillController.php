@@ -37,10 +37,7 @@ class BillController extends Controller
     }
 
    
-    public function show($id)
-    {
-        //
-    }
+ 
 
     public function edit(Bill $bill)
     {
@@ -61,8 +58,15 @@ class BillController extends Controller
 
     }
 
-    public function destroy($id)
+    public function show(Bill $bill)
     {
-        //
+        //Eliminar 
+        return view("bill.eliminar", compact('bill'));
+    }
+
+    public function destroy(Bill $bill)
+    {
+        $bill->delete();
+      return redirect()->route("bills.list")->with("Success", "¡Cliente Eliminado!");
     }
 }

@@ -69,9 +69,8 @@
                                       </button>
                                   </form>
                               </td>
-                            
                               <td>
-                                  <form action="">
+                                <form  method="GET" action="{{route('bills.show',$bill)}}">
                                       <button class="btn  btn-sm">
                                               <i class="fa-solid fa-trash-can"></i>
                                       </button>
@@ -81,6 +80,13 @@
                           @endforeach
                       </tbody>
                   </table>
+                  <a href="{{route("clientes.index")}}" class="btn btn-dark mt-3"><i class="fa-solid fa-house"></i> Home</a>
+                    {{-- <button class="btn btn-dark mt-3" style="float:right"> <i class="fa-solid fa-file-circle-plus"></i>Agregar nueva Fctura</button> --}}
+                
+                    {{-- <button class="btn btn-warning mt-3" style="float:right">
+                    <i class="fa-solid fa-pen-to-square" ></i>
+                        Actualizar Dato
+                    </button> --}}
               </div>
           </p>
         </div>
