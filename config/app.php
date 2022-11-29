@@ -194,7 +194,10 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
+        
+        
+        //::::::::::::::DOM PDF (Libreria para generar Archivo PDF):::::::::::
+        Barryvdh\DomPDF\ServiceProvider::class,
     ],
 
     /*

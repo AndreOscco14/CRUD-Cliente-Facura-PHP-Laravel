@@ -42,7 +42,7 @@ Route::get('client/show', [ClientesController::class, 'show'])->name('clientes.s
 Route::post('client/store', [ClientesController::class, 'store'])->name('clientes.store'); 
 
 
-
+//*_____________________________________________________________________________________________
 //* ===========================================================================================
 //* ==================================== FACTURAS =============================================
 //* ===========================================================================================
@@ -63,4 +63,7 @@ Route::get('bills/update/{bill}',[BillController::class, 'update'])->name('bills
 //* :::::::::::::::::::::::::::::::::: ELIMINAR FACTURA ::::::::::::::::::::::::::::::::::: 
 Route::get('/bills/show/{bill}', [BillController::class, 'show'])->name('bills.show'); 
 Route::delete('/bills/destroy/{bill}', [BillController::class, 'destroy'])->name('bills.destroy'); 
+
+//---------------------Mostrar Pagina PDF-------------------------------
+Route::get('/bills/download/{bill}', [BillController::class, 'download'])->name('bills.download'); 
 

@@ -57,7 +57,7 @@
                             <i class="fa-solid fa-house"></i> Home
                         </a>
                         <button class="btn btn-danger" style="float:right">
-                        <i class="fa-solid fa-trash-can "></i> Eliminar Cliente
+                        <i class="fa-solid fa-trash-can "></i> Eliminar Factura
                         </button>
                    </form> 
                 </div>

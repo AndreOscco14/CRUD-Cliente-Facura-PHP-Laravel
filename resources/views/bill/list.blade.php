@@ -1,14 +1,13 @@
 <!-- Llama a plantilla de Layout para que se pueda leer en welcome.blade.php -->
 @extends('layout/plantilla')
 
-@section('titulopagina','Listado Clientes')
+@section('titulopagina','Listado Facturas')
 
 
 <!-- CONTENIDO -->
 @section('contenido')
 
 <div class="container">
-
 <!--  -->
     <div class="row text-center mt-3">
         <div class="col-sm-12">
@@ -45,6 +44,7 @@
                           <th>Precio</th>
                           <th>Importe total</th>
                           <th>Fecha de Alta</th>
+                          <th>Generar PDF</th>
                           <th>Editar</th>
                           <th>Eliminar</th>
                       </thead>
@@ -62,6 +62,16 @@
                               <td>{{ $bill->unit_price}}</td>
                               <td>{{ $bill->total}}</td>
                               <td>{{ $bill->created_at}}</td>
+
+                                {{-- Generar PDF --}}
+                              <td>
+                                <form  method="GET" action="{{route('bills.download' , $bill)}}">
+                                      <button class="btn  btn-sm">
+                                       <i class="fa-solid fa-file-pdf"></i> 
+                                      </button>
+                                  </form>
+                              </td>
+                              {{-- Editar --}}
                               <td>
                                   <form  method="GET" action="{{route('bills.edit', $bill)}}">
                                       <button class="btn  btn-sm">
@@ -69,6 +79,7 @@
                                       </button>
                                   </form>
                               </td>
+                           {{-- Eliminar --}}
                               <td>
                                 <form  method="GET" action="{{route('bills.show',$bill)}}">
                                       <button class="btn  btn-sm">
@@ -76,6 +87,8 @@
                                       </button>
                                   </form>
                               </td>
+                           
+
                           </tr>
                           @endforeach
                       </tbody>
@@ -92,4 +105,6 @@
         </div>
    </div>
 </div>
+
+
 @endsection

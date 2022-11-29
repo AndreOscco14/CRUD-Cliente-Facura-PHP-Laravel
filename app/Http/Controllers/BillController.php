@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Models\Cliente;
 use App\Models\Bill;
 
+//* DOMpdf
+use Barryvdh\DomPDF\Facade\Pdf;
+
 class BillController extends Controller
 {
   
@@ -67,6 +70,24 @@ class BillController extends Controller
     public function destroy(Bill $bill)
     {
         $bill->delete();
-      return redirect()->route("bills.list")->with("Success", "¡Cliente Eliminado!");
+      return redirect()->route("bills.list")->with("Success", "¡Factura Eliminada!");
     }
+
+    //* Mostrar Vista de Descargar del PDF
+
+     public function download(Bill $bill){
+         $bills = Bill::all();
+         view()->share('bill.download', $bills);
+         $pdf = PDF::loadView('bill.download', compact('bill')) ->setOptions(['defaultFont' => 'sans-serif']);
+         //$pdf = \PDF::loadView('contact')->setOptions(['defaultFont' => 'sans-serif']); 
+
+         return $pdf->download('Factura Cliente.pdf');
+
+    //----- return view("bill.download", compact('bill'));----------
+     }
+
+
+    // public function download(Bill $bill){
+    //     return view("bill.download", compact('bill'));
+    // }
 }
