@@ -35,8 +35,9 @@ Route::get('clients/list', [ClientesController::class, 'read'])->name('clientes.
  Route::get('client/edit/{cliente}', [ClientesController::class, 'edit'])->name('clientes.edit');
  Route::get('client/update/{cliente}', [ClientesController::class, 'update'])->name('clientes.update');
 
- //ELIMINAR
-Route::get('client/show', [ClientesController::class, 'show'])->name('clientes.show'); 
+ //------------------------ ELIMINAR ------------------
+Route::get('client/show/{cliente}', [ClientesController::class, 'show'])->name('clientes.show'); 
+Route::delete('client/destroy/{cliente}', [ClientesController::class, 'destroy'])->name('clientes.destroy'); 
 
 //*Meter datos en la BBDD
 Route::post('client/store', [ClientesController::class, 'store'])->name('clientes.store'); 

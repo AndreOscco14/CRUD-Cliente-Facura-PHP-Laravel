@@ -47,8 +47,8 @@
                     <label for="">Fecha de Alta</label>
                     <input class="form-control" type="date" name="fecha_de_alta">
 
-                    <a href="{{route("clientes.index")}}" class="btn btn-dark mt-3"><i class="fa-solid fa-house"></i> home</a>
-                    <button class="btn btn-dark mt-3" style="float:right"> <i class="fa-solid fa-user-plus"></i>Agregar nuevo cliente</button>
+                    <a href="{{route("clientes.index")}}" class="btn btn-dark mt-3"><i class="fa-solid fa-house"></i> Home</a>
+                    <button class="btn btn-dark mt-3" style="float:right"> <i class="fa-solid fa-user-plus"></i> Agregar nuevo cliente</button>
                 
                 </form>
             </p>

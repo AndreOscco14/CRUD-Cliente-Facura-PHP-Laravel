@@ -64,7 +64,7 @@
       <li class="nav-item"><a href="{{route("clientes.index")}}" class="nav-link px-2 text-muted">Home</a></li>
       <li class="nav-item"><a href="{{ route("clientes.create")}}" class="nav-link px-2 text-muted">Agregar</a></li>
       <li class="nav-item"><a href="{{ route("clientes.read")}}" class="nav-link px-2 text-muted">Listado</a></li>
-      <li class="nav-item"><a href="https://github.com/AndreOscco14/CRUD-Cliente-Facura-PHP-Laravel" class="nav-link px-2 text-muted"><i class="fa-brands fa-github"></i>GitHub</a></li>
+      <li class="nav-item"><a href="https://github.com/AndreOscco14/CRUD-Cliente-Facura-PHP-Laravel" class="nav-link px-2 text-muted"> GitHub <i class="fa-brands fa-github"></i></a></li>
 
     </ul>
     <p class="text-center text-muted">© 2022 NCS prueba, André Elian</p>

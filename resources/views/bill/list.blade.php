@@ -38,7 +38,7 @@
                           <th>Nombre Cliente</th>
                           <th>Apellidos</th>
                           <th>NIF / DNI </th>
-                          <th>Cliente Id</th>
+                          <th>Cliente ID</th>
                           <th>concepto</th>
                           <th>Unidad</th>
                           <th>Precio</th>

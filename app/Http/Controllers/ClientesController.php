@@ -61,11 +61,19 @@ class ClientesController extends Controller
     //=========================================/
     //=========================================
 
-    public function show(Cliente $clientes)
+    public function show(Cliente $cliente)
     {
         //Sirve para obtener registro en nuestra tabla
-        return view('eliminar');
+        return view('eliminar', compact('cliente'));
     }
+
+    public function destroy(Cliente $cliente)
+    {
+        //Elimina un registro
+        $cliente->delete();
+      return redirect()->route("clientes.read")->with("Success", "¡Cliente Eliminado!");
+    }
+
 
 
        public function edit(Cliente $cliente)
@@ -95,8 +103,5 @@ class ClientesController extends Controller
        return redirect()->route("clientes.read")->with("Success", "¡Cliente Actualizado!");
     }
 
-    public function destroy(Cliente $clientes)
-    {
-        //Elimina un registro
-    }
+   
 }

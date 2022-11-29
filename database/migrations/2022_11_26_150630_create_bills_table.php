@@ -20,7 +20,7 @@ return new class extends Migration
             $table->double('total', 8, 2);
             $table->integer('units');
             $table->unsignedBigInteger('client_id');
-            $table->foreign('client_id')->references('id')->on('clientes');
+            $table->foreign('client_id')->references('id')->on('clientes')->onDelete('cascade');
             $table->timestamps();
         });
     }

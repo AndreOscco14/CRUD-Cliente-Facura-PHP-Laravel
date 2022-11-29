@@ -19,7 +19,7 @@
                 <div class="alert alert-danger" role="alert">
                    ¿Desea eliminar Factura?
 
-                   <table class="table table-sm table-hover">
+                   <table class="table table-sm table-hover text-center">
                     <thead>
                           <th>ID FACTURA</th>
                           <th>Nombre Cliente</th>

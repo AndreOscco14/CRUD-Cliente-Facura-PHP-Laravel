@@ -89,8 +89,9 @@
                                    </button>
                               </form>
                           </td>
+                          {{-- ELIMINAR --}}
                             <td>
-                                <form action="">
+                                <form  method="GET" action=" {{route('clientes.show', $cliente)}}">
                                     <button class="btn  btn-sm">
                                             <i class="fa-solid fa-trash-can"></i>
                                     </button>
