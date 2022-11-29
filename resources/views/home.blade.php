@@ -108,7 +108,7 @@
 
 
 <!--======================== FOOTER ==================================== -->
-<footer class="py-3 my-4"
+{{-- <footer class="py-3 my-4"
      style="
         text-align: center;
         /* font-family: sans-serif; */
@@ -123,6 +123,6 @@
       <li class="nav-item"><a href="{{ route("clientes.read")}}" class="nav-link px-2 text-muted">Listado</a></li>
     </ul>
     <p class="text-center text-muted">© 2022 NCS prueba, André Elian</p>
-</footer>
+</footer> --}}
 <!--======================== FOOTER ==================================== -->
 @endsection

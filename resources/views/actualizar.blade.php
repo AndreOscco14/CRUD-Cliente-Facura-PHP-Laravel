@@ -62,18 +62,5 @@
     </div>
 </div>
 
-<!--======================== FOOTER ==================================== -->
-<footer class="py-3 my-4"
-     style="
-        text-align: center;
-        padding: 1em 0;
-        margin-top: auto;">
-    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-      <li class="nav-item"><a href="{{route("clientes.index")}}" class="nav-link px-2 text-muted">Home</a></li>
-      <li class="nav-item"><a href="{{ route("clientes.create")}}" class="nav-link px-2 text-muted">Agregar</a></li>
-      <li class="nav-item"><a href="{{ route("clientes.read")}}" class="nav-link px-2 text-muted">Listado</a></li>
-    </ul>
-    <p class="text-center text-muted">© 2022 NCS prueba, André Elian</p>
-</footer>
-<!--======================== FOOTER ==================================== -->
+
 @endsection
